@@ -8,10 +8,10 @@ The feature: a local, single-user web app that lets you chat with your Markdown 
 
 | File / folder | What it is |
 |---|---|
-| [`interview.md`](interview.md) | The recorded pre-build interview — Q&A, five rounds, plus the summary that produced the spec |
-| [`spec.md`](spec.md) | The feature spec produced from the interview |
-| [`build-plan.md`](build-plan.md) | The phased build plan (5 phases, tests-first, drift considerations) — and the work log that was filled in as each phase completed |
-| [`WALKTHROUGH.md`](WALKTHROUGH.md) | A long-form, phase-by-phase narrative of how the build actually went: commands run, test counts, decisions, mid-phase fixes |
+| [`docs/interview.md`](docs/interview.md) | The recorded pre-build interview — Q&A, five rounds, plus the summary that produced the spec |
+| [`docs/spec.md`](docs/spec.md) | The feature spec produced from the interview |
+| [`docs/build-plan.md`](docs/build-plan.md) | The phased build plan (5 phases, tests-first, drift considerations) — and the work log that was filled in as each phase completed |
+| [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) | A long-form, phase-by-phase narrative of how the build actually went: commands run, test counts, decisions, mid-phase fixes |
 | `src/` | The code: PAA components (`memory/`, `engine/`, `auth/`, `gateway/`), utility folders (`library/`, `tools/`), and shared (`types/`, `adapters/`, `config/`) |
 | `web/` | The browser UI — `index.html`, `app.js`, `app.css` (vanilla, no framework) |
 | `scripts/serve.js` | HTTP entry point — `node:http` server, binds `127.0.0.1` only |
@@ -47,13 +47,13 @@ Open the URL in your browser. The status line will say `<N> files indexed` after
 If you're learning the workflow, read the artifacts in the order they were produced:
 
 1. [`prompts/01-interview.md`](prompts/01-interview.md) — the interview prompt
-2. [`interview.md`](interview.md) — the actual interview that ran
+2. [`docs/interview.md`](docs/interview.md) — the actual interview that ran
 3. [`prompts/02-spec.md`](prompts/02-spec.md) — the spec prompt + template
-4. [`spec.md`](spec.md) — the filled-in spec
+4. [`docs/spec.md`](docs/spec.md) — the filled-in spec
 5. [`prompts/03-build-plan.md`](prompts/03-build-plan.md) — the build plan prompt
-6. [`build-plan.md`](build-plan.md) — the actual phased plan + per-phase work log
+6. [`docs/build-plan.md`](docs/build-plan.md) — the actual phased plan + per-phase work log
 7. [`prompts/04-execute.md`](prompts/04-execute.md) — the execute prompt
-8. [`WALKTHROUGH.md`](WALKTHROUGH.md) — what happened during execute, phase by phase
+8. [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) — what happened during execute, phase by phase
 9. The code itself
 
 ## Related
