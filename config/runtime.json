@@ -1,0 +1,17 @@
+{
+  "memory_root": "./.daves-ai/memory",
+  "provider_adapter": "openai-compatible",
+  "auth_mode": "local-owner",
+  "tool_sources": ["library"],
+  "gateway": {
+    "bind_address": "127.0.0.1",
+    "port": 4321
+  },
+  "library": {
+    "notes_folder": "~/Desktop/BrainDrive Files"
+  },
+  "adapter": {
+    "api_base_url": "http://localhost:11434/v1",
+    "model": "qwen2.5:7b"
+  }
+}

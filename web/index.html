@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daves-AI</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="brand">Daves-AI</h1>
+      <div class="topbar-controls">
+        <span id="status" class="status" aria-live="polite">indexing…</span>
+        <button id="reindex" class="reindex-btn" type="button">Re-index</button>
+      </div>
+    </header>
+
+    <main id="transcript" class="transcript" aria-live="polite"></main>
+
+    <form id="composer" class="composer">
+      <label for="input" class="visually-hidden">Message</label>
+      <textarea
+        id="input"
+        class="composer-input"
+        placeholder="Ask about your notes…"
+        rows="1"
+        autofocus
+      ></textarea>
+      <button id="send" class="send-btn" type="submit">Send</button>
+    </form>
+
+    <footer class="site-footer">
+      Built on
+      <a
+        href="https://github.com/Personal-AI-Architecture/the-architecture"
+        target="_blank"
+        rel="noopener"
+        >The Personal AI Architecture</a
+      >
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
