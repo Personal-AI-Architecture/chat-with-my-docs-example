@@ -1,5 +1,7 @@
 # chat-with-my-docs-example
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A worked example of building on the [Personal AI Architecture TypeScript template](https://github.com/Personal-AI-Architecture/ts-architecture-template) using the **5-step build workflow** (interview → spec → build plan → execute → test).
 
 The feature: a local, single-user web app that lets you chat with your Markdown notes through a browser. Fully on-device — no cloud calls, no embeddings. Built in five phases, tests-first, with the architecture's conformance check as the safety net.
