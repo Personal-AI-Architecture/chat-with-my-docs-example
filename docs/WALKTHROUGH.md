@@ -1,6 +1,6 @@
 # Walkthrough — how this was built, phase by phase
 
-This is the long-form story of building `chat-with-my-docs-example` on the [PAA TypeScript template](https://github.com/Personal-AI-Architecture/ts-architecture-template) using its [5-step build workflow](prompts/README.md). Every phase ran tests-first, every phase ended green on the architecture conformance check, every mid-phase fix is recorded.
+This is the long-form story of building `chat-with-my-docs-example` on the [PAA TypeScript template](https://github.com/Personal-AI-Architecture/ts-architecture-template) using its [5-step build workflow](../prompts/README.md). Every phase ran tests-first, every phase ended green on the architecture conformance check, every mid-phase fix is recorded.
 
 If you just want the artifacts: see [`interview.md`](interview.md), [`spec.md`](spec.md), and [`build-plan.md`](build-plan.md). This file is for people who want to see the *process*.
 
@@ -27,7 +27,7 @@ Reading order before doing any work:
 
 ## Step 1 — Interview
 
-Prompt: [`prompts/01-interview.md`](prompts/01-interview.md). It tells the agent to read the spec template first (`prompts/02-spec.md`), then interview the user in batches of 2-4 questions until every required spec section can be filled with confidence.
+Prompt: [`prompts/01-interview.md`](../prompts/01-interview.md). It tells the agent to read the spec template first (`../prompts/02-spec.md`), then interview the user in batches of 2-4 questions until every required spec section can be filled with confidence.
 
 The conversation took **five rounds**. Captured verbatim in [`interview.md`](interview.md). Headlines per round:
 
@@ -45,7 +45,7 @@ After the rounds, the agent produced a summary table, a PAA component mapping, a
 
 ## Step 2 — Spec
 
-Prompt: [`prompts/02-spec.md`](prompts/02-spec.md). The spec template is the contract: overview, user stories with Given/When/Then, invariants, edge cases, failure modes, scope, technical context, test strategy, security, explicit boundaries, open questions.
+Prompt: [`prompts/02-spec.md`](../prompts/02-spec.md). The spec template is the contract: overview, user stories with Given/When/Then, invariants, edge cases, failure modes, scope, technical context, test strategy, security, explicit boundaries, open questions.
 
 The agent wrote [`spec.md`](spec.md) directly from the interview — no new questions, just the agreed-upon answers committed.
 
@@ -60,7 +60,7 @@ Both corrections also propagated to `interview.md` so the shareable artifact ref
 
 ## Step 3 — Build plan
 
-Prompt: [`prompts/03-build-plan.md`](prompts/03-build-plan.md). This step has a heavier reading load: before designing, the agent reads the drift-guards in `docs/blueprints/drift/` for each PAA component the build touches.
+Prompt: [`prompts/03-build-plan.md`](../prompts/03-build-plan.md). This step has a heavier reading load: before designing, the agent reads the drift-guards in `docs/blueprints/drift/` for each PAA component the build touches.
 
 Drift-guards read before designing:
 
@@ -94,7 +94,7 @@ The user signed off and the build started.
 
 ## Step 4 — Execute
 
-Prompt: [`prompts/04-execute.md`](prompts/04-execute.md). Three hard gates: (1) the user types `PROCEED` between phases, (2) the user types `approved` before any new top-level package is installed, (3) the agent stops and asks if it gets stuck. Tests-first inside every phase.
+Prompt: [`prompts/04-execute.md`](../prompts/04-execute.md). Three hard gates: (1) the user types `PROCEED` between phases, (2) the user types `approved` before any new top-level package is installed, (3) the agent stops and asks if it gets stuck. Tests-first inside every phase.
 
 The execute prompt also requires reading the relevant component drift-guard *before* implementing anything in that component. Drift control is a per-phase responsibility, not a one-time read at planning time.
 

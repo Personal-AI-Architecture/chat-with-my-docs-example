@@ -1,6 +1,6 @@
 # Interview — Chat With My Docs
 
-> Pre-build alignment interview using the Personal AI Architecture template's [Step 1 — Interview](prompts/01-interview.md) workflow. The goal: gather enough alignment to write a confident spec without inventing details. Output is in [`spec.md`](spec.md).
+> Pre-build alignment interview using the Personal AI Architecture template's [Step 1 — Interview](../prompts/01-interview.md) workflow. The goal: gather enough alignment to write a confident spec without inventing details. Output is in [`spec.md`](spec.md).
 
 - **User:** Dave Waring
 - **Agent:** Claude (Opus 4.7) running in Claude Code
